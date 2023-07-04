@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+    <link rel="stylesheet" type ="text/css" href="form.css" media ="screen"/>
+    <title>Feedbacks e Sugestões</title>
+</head>
+
+<body>
+    <!-- section criada para separar o form da imagem de coração e da mensagem de 'muito obrigado' -->
+    <section>
+
+        <!-- autocomplete: off: evita que apareçam sugestões de texto -->
+        <form action="/index.html" id="formulario" autocomplete="off"> 
+            <fieldset>
+                
+                <img id="logo" src="imagens/vagalumes_logo_branca.png" height="60" width="60">
+                <div class="itens">
+                    <label class="textos" for="nome">Nome</label>
+                    <input type="text" id="nome" class="caixa-texto" required>
+                </div>
+                <div class="itens">
+                    <label class="textos" for="email">E-mail</label>
+                    <input type="email" id="email" class="caixa-texto" required>
+                </div>
+
+                <div id="opcoes1" class="itens">
+                    <label>O que você acha das informações contidas no site?</label>
+                    <div class="conjunto-labels">
+                        <!-- type: radio; atributo para opções -->
+                            <input type="radio" name="opcao" value="otimo" id="otimo1" checked>
+                        <label for="otimo1" class="labels">:D</label>
+                            <input type="radio" name="opcao" value="bom" id="bom1">
+                        <label for="bom1" class="labels">:)</label>
+                            <input type="radio" name="opcao" value="medio" id="medio1">
+                        <label for="medio1" class="labels">:/</label>
+                            <input type="radio" name="opcao" value="ruim" id="ruim1">
+                        <label for="ruim1" class="labels">:(</label>
+                            <input type="radio" name="opcao" value="horrivel" id="horrivel1">
+                        <label for="horrivel1" class="labels">D:</label>
+                    </div>
+                </div>
+                <!-- repetições -->
+                <div id="opcoes2" class="itens">
+                    <label>O que você acha do design?</label>
+                    <div class="conjunto-labels">
+                        <input type="radio" name="opcao2" value="otimo" id="otimo2" checked> 
+                        <label for="otimo2" class="labels">:D</label>
+                            <input type="radio" name="opcao2" value="bom" id="bom2"> 
+                        <label for="bom2" class="labels">:)</label>
+                            <input type="radio" name="opcao2" value="medio" id="medio2"> 
+                        <label for="medio2" class="labels">:/</label>
+                            <input type="radio" name="opcao2" value="ruim" id="ruim2"> 
+                        <label for="ruim2" class="labels">:(</label>
+                            <input type="radio" name="opcao2" value="horrivel" id="horrivel2"> 
+                        <label for="horrivel2" class="labels">D:</label>
+                    </div>
+                </div>
+                <!-- repetições -->
+                <div id="opcoes3" class="itens">
+                    <label>Qual a sua opinião sobre a organização?</label>
+                    <div class="conjunto-labels">
+                        <input type="radio" name="opcao3" value="otimo" id="otimo3" checked> 
+                        <label for="otimo3" class="labels">:D</label>
+                            <input type="radio" name="opcao3" value="bom" id="bom3"> 
+                        <label for="bom3" class="labels">:)</label>
+                            <input type="radio" name="opcao3" value="medio" id="medio3"> 
+                        <label for="medio3" class="labels">:/</label>
+                            <input type="radio" name="opcao3" value="ruim" id="ruim3"> 
+                        <label for="ruim3" class="labels">:(</label>
+                            <input type="radio" name="opcao3" value="horrivel" id="horrivel3"> 
+                        <label for="horrivel3" class="labels">D:</label>
+                    </div>
+                </div>
+                <div id="deslizar"></div>
+
+                <div id="texto-sugestao" class="itens">
+                    <!-- definindo a textarea: quantas colunas e quantas linhas -->
+                    <label for="sugestao">Tem sugestões para melhorar a página?</label>
+                    <textarea id="sugestao" cols="30" rows="10"></textarea>
+                </div>
+
+                <!-- botão para enviar -->
+                <button id="botao" type="submit">ENVIAR</button> 
+                
+            </fieldset>
+        </form>
+        <img id="coracao" src="https://cdn-0.emojis.wiki/emoji-pics/twitter/white-heart-twitter.png" alt="" height="50px">
+        <p>Muito Obrigado!</p>
+    </section>  
+</body>
+</html>

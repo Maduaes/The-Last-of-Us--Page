@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type ="text/css" href="contato.css" media ="screen"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+
+<body>
+
+    <h1>Contato</h1>
+    <section>
+        <!-- href: links -->
+        <a href="index.html"><img id="seta" height="70px" src="https://icones.pro/wp-content/uploads/2021/06/symbole-fleche-gauche-noir.png"></a>
+        
+        <div id="contatos">
+            <!-- figcaption: legenda da imagem -->
+            <figure class="div-retrato">
+                <img src="imagens/dudek.png" height="240px">
+                <figcaption>Arthur M. Dudek</figcaption>
+            </figure>
+
+            <div class="info-gap"> 
+                <!-- address: tag usada para endereços; contatos; transmite informação
+                     semântica adicional -->
+                <div class="email-telefone">
+                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-de-courrier-electronique-noir.png" height="40px">
+                    <address class="email">arthurmdudek@gmail.com</address>     
+                </div>
+
+                <div class="email-telefone">
+                    <img class="tel1" src="https://www.freepnglogos.com/uploads/logo-telefone-png/icone-telefone-png-download-3.png" height="30px">
+                    <address class="tel1">+55 (42) 9 8852-1508</address>
+                </div>
+            </div>
+
+            <figure class="div-retrato">
+                <img src="imagens/madu.png" height="240px">
+                <figcaption>Maria E. Senff</figcaption>
+            </figure>
+
+            <div class="info-gap">
+                <div class="email-telefone">
+                    <img src="https://icones.pro/wp-content/uploads/2021/02/icone-de-courrier-electronique-noir.png" height="40px">
+                    <address class="email">mariaeduardasenffdesouza@gmail.com</address>
+                </div>
+
+                <div class="email-telefone">
+                    <img class="tel2" src="https://www.freepnglogos.com/uploads/logo-telefone-png/icone-telefone-png-download-3.png" height="30px">
+                    <address class="tel2">+55 (42) 9 9865-7146</address>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="icones-form">
+
+            <div id="icones">
+                <a href="https://twitter.com/home"><img src="https://pngimg.com/d/twitter_PNG1.png" height="50px"></a>
+                <a href="https://www.instagram.com"><img src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-noir.png" height="63px"></a>
+                <a href="https://www.facebook.com"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384021.png" height="50px"></a>
+            </div>
+
+            <!-- autocomplete: off: evita que apareçam sugestões de texto -->
+            <form action="contato.html" id="form" autocomplete="off">
+                <h2>Nos mande uma mensagem!</h2>
+                <!-- fieldset: agrupa elementos dentro do formulário -->
+                <fieldset>
+                    <!-- label: rótulo -->
+                    <!-- input: entrada de dados -->
+                    <div id="nome-sobrenome">
+                        <div>
+                            <!-- type: texto; aceita qualquer tipo de texto-->
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" required> 
+                        </div>
+                        <div>
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" id="sobrenome" required>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- type: email; aceita apenas endereços de email -->
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div id="div-mensagem">
+                        <!-- textarea: área para escrever mensagens ou grandes textos -->
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" cols="30" rows="10" required></textarea>
+                        <button id="botao" type="submit"><img src="https://cdn.icon-icons.com/icons2/1875/PNG/512/send_120237.png" height="70px"></button>
+                        <label for="botao" id="enviar-label">ENVIAR</label>
+
+                    </div>
+                    <!-- type: submit; serve para enviar o formulário -->
+                                    
+                </fieldset>
+            </form>
+            
+        </div>
+
+    </section>
+</body>
+
+</html>

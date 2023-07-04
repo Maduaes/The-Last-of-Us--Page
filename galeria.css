@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap');
+*{
+    border: 0; padding: 0; margin: 0; background: none; text-decoration: none; 
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #252524;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111111;
+    padding: 0 5% 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav a{
+    display: inline-block; 
+    width: 130px;
+    height: 60px;
+    font-size: 105%;
+    color: #e8ebe2;
+    text-align: center;
+    line-height: 60px;
+}
+nav a:hover{
+    background-color: #202020;
+    color: rgb(152, 182, 152);
+}
+p{
+    text-align: center;
+    color: #8e8e8e;
+    background-color: #111111;
+    font-size: 150%;
+    padding: 5px;
+    border-top: #373737 solid 1px;
+}
+#gp-header{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    color: #8e8e8e;
+    font-size: 150%;
+}
+#arma{
+    transform: rotateY(180deg);
+    filter: invert(65%);
+}
+#arma:hover, #arma:focus{
+    transform: rotateY(360deg);
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.galeria{
+    background-image: url(https://hips.hearstapps.com/hmg-prod/images/cordyceps-flower-flying-in-mid-air-in-black-royalty-free-image-1675098904.jpg?crop=1xw:0.84335xh;center,top); background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 0.5fr);
+    gap: 3%;
+    padding: 1.5%;  
+}
+.imagem{
+    width: 100%;
+    border-radius: 7%;
+    float: left;
+}
+figcaption{
+    position: relative;
+    bottom: 45px;
+    left: 25px;
+    font-size: 130%;
+    display: none;
+}
+.imagem:hover{
+    filter: brightness(65%);
+    border-radius: 7%;
+    transition: all 0.2s;
+}
+figure:hover figcaption{
+    display: block;
+    width: 210px;
+    height: 20px;
+    color: #e8ebe2;
+}
+@media only screen and (max-width: 700px){
+    header p{
+        display: none;
+    }
+    nav{
+        display: flex;
+        font-size: 100%; 
+        justify-content: space-between;  
+        gap: 20px;
+    }nav a{
+        display: flex;
+        width: 100%;
+        
+    }
+}
+

@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Dekko&family=Encode+Sans+Condensed:wght@100;400&family=Imprima&display=swap');
+
+/* Seleciona todo o código */
+*{
+    border: none; margin: 0; padding: 0; text-decoration: none; box-sizing: border-box;
+}
+*::selection{
+    background-color: rgba(117, 144, 103, 0.488);
+}
+body{
+    font-size: 100%;
+}
+/*cabeçalho*/
+header{
+    display: flex;
+    background-color: #0d0c0b;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 0.2px solid rgba(255, 255, 255, 0.266);
+    user-select: none;
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+}
+input{
+    display: none;
+}
+/* DROPDOWN */
+/* alinhando a caixinha de texto do menu e definindo o tamanho */
+.itens-menu{
+    display: inline-block;
+    text-align: center;
+    line-height: 75px;
+    height: 75px;
+    width: 110px;
+    font-family: 'Imprima', sem serifa;
+    color: #E1EDDD;
+    font-size: 18px;
+}
+/* após passar o mouse: cor verdinha */
+.itens-menu:hover{
+    color: rgb(175, 116, 106);
+    background-color: #1d1b1a;
+    transition: all 0.3s;
+}
+/* deixando os itens separados */
+#menu{
+    display: flex;
+    list-style: none;
+}
+/* esconder o menu interno */
+#menu li  ul{
+    position:absolute;
+    display:none;
+    top: 100%;
+    list-style: none;
+}
+/* após passar o mouse, criando caixa e estilizando */
+#menu li:hover ul, .jogos{
+    display:block;
+    width:225px;
+    height: 170px;
+    background-color: #1b1d1a;
+    padding: 8px 5px;
+}
+.jogos{
+    display: block;
+    font-family: 'Imprima', sem serifa;
+    color: #E1EDDD;
+    font-size: 108%;
+    width: 175px;
+    height: 54px;
+    padding: 8px 5px;
+}
+#menu .jogos:hover{
+    color: #86a67a;
+}
+/*SESSÃO 1 - SINOPSE, LOGO E INFORMAÇÕES*/
+#sessao1{
+    background: url(imagens/ellie-imagem4.png); background-size: cover; width: 100%;
+    background-position: center;
+}
+/* alinhando */
+#div-sessao1{
+    display: flex;
+    padding: 38px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-right: 60px;
+}
+/* coluna */
+#div-p{
+    display: flex;
+    flex-direction: column;
+    color: #dadfd6;
+}
+/* trazendo o título mais pra esquerda */
+#titulo-sinopse{
+    font-size: 350%;
+    position: relative;
+    right: 90px;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 400;
+}
+#sinopse, #titulo-sinopse{
+    position: relative;
+    bottom: 30px;
+}
+/* sombras pra ficar mais fácil de ler */
+#sinopse, #sinopse2, #titulo-sinopse{
+    text-shadow: 
+        0px 1px 2px #000000, 
+        0px 4px 2px #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Encode Sans Condensed', sans-serif;
+    width: 550px;
+}
+/* ALINHAMENTOS; TAMANHOS; POSIÇÕES */
+#sinopse{
+    font-size: 35px;
+    text-align: left;
+    position: relative;
+    right: 20px;
+}
+#sinopse2{
+    font-size: 35px;
+    text-align: right;
+    position: relative;
+    top: 10px;
+}
+/* cor da parte do texto onde é strong */
+#sinopse strong{
+    color: rgb(175, 116, 106);
+    text-shadow: 
+        1px 2px 2px #000000,
+        0px 2px 2px #000000;
+        text-decoration:double;
+}
+#sinopse strong:hover{
+    color: rgb(116, 161, 170);
+    transition: all 0.2s;
+}
+/* SESSÃO 2 - ANUNCIANDO FEEDBACK/FORMULÁRIO */
+#sessao2{
+    background-image: url(imagens/anuncio_form_background.png); background-size: cover;
+}
+/* alinhando todos os itens dentro do "anúncio" */
+#anuncio-formulario{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 12px;
+}
+
+/* estilização da fonte do título principal do anúncio */
+/* ALINHAMENTOS; CORES; TAMANHOS */
+#anuncio-texto{
+    font-family: 'DM Serif Text', serif;
+    font-weight: 100;
+    color: #CDCDCD;
+    font-size: 60px;
+}
+#anuncio-subtexto{
+    font-family: 'DM Serif Text', serif;
+    color: #b7b6b6;
+    font-size: 30px;
+    text-align: right;
+}
+#anuncio-formulario div{
+    display: flex;
+    flex-direction: column;
+}
+/* definindo o tamanho do botão, alinhamento, cor, estilo, borda, fonte */
+#botao-anuncio{
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    height: 75px;
+    width: 300px;
+    background: transparent;
+    border: solid #b0b6ae 3px;
+    font-family: 'Dekko', cursiva;
+    font-size: 30px;
+    color: #b0b6ae;
+    background-image: linear-gradient(90deg, #1e1d1d 0%, rgba(82, 60, 56, 0.732) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 300%;
+    transition: 300ms ease-in;
+    user-select: none;
+}
+/* após passar o mouse: fazer o botão ficar de outro jeito */
+#botao-anuncio:hover{
+    text-shadow: none;
+    cursor: pointer;
+    background-position: 0%;
+}
+/*SESSÃO 3 - BOTÃO PERSONAGEM*/
+/* coluna - espaço entre itens*/
+#sessao3{
+    display: flex;
+    flex-direction: column;
+    background-image: url(imagens/joel-imagem2.png); background-size: 100%; 
+    background-repeat: no-repeat;
+    background-color: #050A06;
+    gap: 100px;
+}
+/* alinhando*/
+#sessao3-1{
+    display: flex;
+    padding: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/* posicionando em uma parte específica da sessão */
+#joel{
+    font-family: 'Encode Sans Condensed', sans-serif;
+    color: #b0b6ae;
+    font-size: 25px;
+}
+/* ALINHANDO; CORES; TAMANHOS; FONTES */
+/* separando botão da div */
+#div-sessao3{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+/* espaçamento entre textos em coluna */
+#div-pers{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #ddede9;
+}
+/* FONTES; TAMANHOS; PESO */
+#pers-titulo{
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+#pers-texto, #pers-info{
+    font-size: 35px;
+    font-weight: 300;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+/* Definindo tamanho do botão; borda radial; fonte; peso; cor */
+#botao-pers{
+    height: 70px;
+    width: 400px;
+    border-radius: 25px;
+    font-family: 'Dekko', cursiva;
+    font-size: 35px;
+    font-weight: 500;
+    color: #2b2522;
+    background-image: linear-gradient(45deg, #6ba740 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: 500ms linear;
+    user-select: none;
+}
+#botao-pers:hover{
+    color: #171916;
+    background-position: 0;
+    cursor: pointer;
+}
+/* SESSÃO 3-2 - série HBO */
+/* colocando em coluna; espaçamento */
+#sessao3-2{
+    background-image: url(imagens/estalador.png); background-size: 100%; 
+    background-repeat:no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 100px 30px 100px 80px;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+/* FONTES; CORES; TAMANHO; POSIÇÃO */
+.hbo-frases-info{
+    font-size: 35px;
+    color: #dadfd6;
+}
+#titulo-hbo{
+    font-size: 50px;
+    color: #dadfd6;
+}
+#oferta-hbo{
+    font-size: 35px;
+    color: #dadfd6;
+}
+.logo-hbo{
+    width: 550px;
+    border: rgb(175, 116, 106) solid 1px;
+    border-radius: 100px;
+    position: relative;
+    bottom: 1px;
+    user-select: none;
+}.logo-hbo:hover{
+    transition: all 0.8s;
+    animation: animacao 0.4s forwards;
+}
+
+@keyframes animacao{
+    0%{
+        background-color: #1a1b18b9;
+        bottom: 1px;
+    }
+    25%{
+        top: 1px;
+    }50%{
+        top: 3px;
+    }
+    100%{
+        top: 5px; 
+    }
+}
+/* FOOTER */
+#footer{
+    background-color: #2c2d2b;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+/* parte 1 - INFORMAÇÕES*/
+/* alinhando */
+#sessao-footer1{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+/* fonte e centro */
+#logo-footer{
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Dekko', cursive;
+}
+/* cor e tamanho da fonte */
+#email-footer p, #mensagem-footer p, #sessao-footer2 p{
+    font-size: 25px;
+    color: #e3ecd3;
+}
+/* alinhando */
+#email-footer, #mensagem-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+}
+#mensagem-footer{
+    justify-content: space-between;
+}#contato-link2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* cores e tamanho*/
+address{
+    font-size: 20px;
+    color: #ffffff;
+}
+footer a{
+    font-size: 135%;
+    color: #a9b694;
+}
+/* após passar mouse: 'contato' fica cor verde */
+.contato-link:hover{
+    color: #707d5b;
+}
+/* parte 2 - ÍCONES */
+/* alinhando */
+#sessao-footer2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    border-top: 1px solid #CDCDCD;
+    padding-top: 20px;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+/* espaço entre os ícones */
+#icones-footer{
+    display: flex;
+    gap: 30px;
+}
+#icones-footer a:hover{
+    filter:invert(40%);
+}

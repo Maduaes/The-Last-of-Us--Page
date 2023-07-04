@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2? family= DM+Serif+Text & exibir=trocar');
+
+*{
+    border: none; border-style: none; padding: 0; margin: 0; background-color: none; background: none; text-decoration: none; font-style: none; font-family: 'DM Serif Text', serif;
+}
+/* colocando cor de fundo, imagem padronizada e deixando ela se repetir */
+body{
+    background-color: #E8EBE2;
+    background-image: url(imagens/padrão.png);
+    text-align: center;
+    margin: 5px;
+}
+/* separando a parte dos retratos e a parte da mensagem */
+section{
+    display: flex;
+    justify-content: space-around;
+}
+/* tamanho fontes */
+h1{
+    font-size: 60px;
+}h2{
+    font-size: 40px;
+}
+
+/* RETRATOS E CONTATOS */
+/* deixando os retratos e e os address em coluna */
+#contatos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+/* transformando a div em bloco para ter o fundinho de outra cor atrás dos retratos */
+.div-retrato{
+    display: block;
+    background-color: #CECECE;
+    border-radius: 60px;
+    height: 240px;
+    width: 240px;
+}
+/* legenda das imagens retratos */
+figcaption{
+    font-size: 25px;
+    font-weight: 600;
+    padding: 2px;
+}
+/* espaço entre a img e o address */
+.email-telefone{
+    display: flex;
+    gap: 5px;
+}
+/* centralizando os textos com as imgs e tamanhos de fonte */
+.email{
+    font-size: 30px;
+}.tel1{
+    font-size: 22px;
+    position: relative;
+    left: 18%;
+}.tel2{
+    font-size: 22px;
+    position: relative;
+    left: 27.5%;
+}
+
+/* MENSAGEM - FORMULÁRIO */
+/* deixando os icones de redes sociais e o formulário em linha  */
+#icones-form{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top: 130px;
+    right: 50px;
+}
+/* deixando os icones em coluna */
+#icones{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 65px;
+    gap: 10px;
+}
+/* deixando a mensagem em cima do fieldset */
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* coluna e espaço */
+fieldset{
+    display: flex;
+    flex-direction: column;
+    background-color: #CECECE;
+    padding: 20px;
+    gap: 20px;
+}
+/* dando espaço entre a div do nome e a div do sobrenome */
+#nome-sobrenome{
+    display: flex;
+    gap: 20px;
+}
+/* transformando em bloco, definindo tamanho da entrada de dados(input) e estilizando */
+input{
+    display: block;
+    background-color: #ABABAB;
+    height: 60px;
+    width: 300px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 25px; 
+    text-align: center;
+}
+/* após a caixa de texto ser clicada, retirar a caixa padrão */
+input:focus, textarea:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+/* deixando a div email ocupando todo o espaço */
+#email{
+    width: 100%;
+}
+/* tamanhos e pesos */
+label{
+    font-size: 25px;
+    font-weight: 600;
+}
+/* label em cima; textarea em baixo */
+#div-mensagem{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+/* tamanho da textarea; cor; estilo */
+#mensagem{
+    background-color: #ABABAB;
+    height: 170px;
+    width: auto;
+    font-size: 25px;
+    padding: 15px;
+}
+/* botao de enviar a mensagem em posição absoluta: depois definir uma posição com right e top */
+button{
+    position: absolute;
+    right: 20px;
+    top: 455px;
+}
+#enviar-label{
+    display: none;
+}
+/* após passar o mouse: mãozinha */
+button:hover{
+    cursor: pointer;
+}
+/* seta - HOME */
+#seta{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+@media only screen and (max-width: 700px){
+    section{
+        flex-direction: column-reverse;
+        gap: 200px;
+        margin: 0;
+    }   
+    #icones-form{
+        flex-direction: column-reverse;
+        right: 0;
+    }
+    #icones{
+        flex-direction: row;
+        margin: auto;
+        top: 0;
+    }
+    #form{
+        margin: auto;
+    }
+    fieldset{
+        width: auto;
+        gap: 25px;
+        padding: 20px;
+    }
+    #nome-sobrenome{
+        flex-direction: column;
+    }
+    input, #email{
+        width: 95%;
+        margin: auto;
+    }
+    #mensagem{
+        width: 90%;
+        margin: auto;
+    }
+    #div-mensagem{
+        text-align: center;
+    }
+    .email, .tel1, .tel2{
+        font-size: 110%;
+        line-height: 250%;
+    }
+    h2{
+        font-size: 150%;
+    }h1{
+        padding-top: 5%;
+        font-size: 250%;
+    }
+    button{
+        display: none;
+    }
+    #enviar-label{
+        display: block;
+        width: 28%;
+        font-size: 130%;
+        border-radius: 10px;
+        padding: 5px;
+        margin: auto;
+        background-color: #8b8b8b;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    #enviar-label:hover{
+        background-color: rgb(108, 113, 118);
+        transition: all 0.5s;
+    }
+    #seta{
+        left: 3%;
+        height: 8%;
+    }
+}

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed&display=swap');
+
+*{
+    border: none; padding: 0; margin: 0; background: none; text-decoration: none; font-family: 'Encode Sans Condensed', sans-serif; text-align: center;
+}
+/* definindo a imagem de fundo pra página toda */
+body{
+    background-image: url(https://thelastofus.com.br/wp-content/uploads/2021/08/Naughty-Dog-confirma-multiplayer-autonomo-de-The-Last-of-Us-2.jpg);
+    background-size: cover; background-repeat: no-repeat;
+    margin: 5%;
+}
+/* deixando a mensagem 'muito obrigado' e o coração alinhados em coluna com o formulário */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    font-size: 23px; 
+    font-weight: 400;
+}
+/* estilizando a caixa do form */
+#formulario{
+    display: block;
+    width:550px;
+    height:950px;
+    background-color: #141516; 
+    border-radius: 20px;
+    padding: 13px 60px 30px;
+    border: 1px solid #4d4d4b;
+    box-shadow: 10px 10px 10px #050505;
+}
+/* alinhando em coluna os itens dentro do fieldset */
+#formulario fieldset{
+    display: flex;
+    color: #e8ebe2;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+/* imagem no meio */
+#logo{
+    margin: auto;
+    padding-top: 5px;
+}
+/* deixando a label e input alinhados em coluna */
+.itens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+/* estilizando a "caixa de texto" */
+.caixa-texto{
+    border-bottom: 1px solid #e8ebe2;
+    color: #e8ebe2;
+    font-size: 25px;
+    height: 40px;
+    width: 380px;
+    margin: auto;
+}
+/* retirando a caixinha padrão ao clicar na caixa de texto */
+.caixa-texto, #sugestao{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+/* espaço entre as opções */
+#opcoes1, #opcoes2, #opcoes3{
+    gap: 20px;
+}
+/* selecionando primeira label da classe 'itens' */
+.itens > label{
+    color: #bac7cf;
+}
+input[type="radio"]{
+    display: none;
+}
+.conjunto-labels{
+    display: flex;
+    justify-content: space-around;
+}
+.labels{
+    display: inline-block;
+    height: 40px;
+    width: 80px;
+    line-height: 35px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.labels:hover, input[type="radio"]:checked +label{
+    background-color: #252524;
+    color: #eab089;
+    text-align: center;
+}
+/* arrumando textarea */
+#sugestao{
+    border: 2px solid #e8ebe2;
+    border-radius: 10px;
+    height: 160px;
+    color: #e8ebe2;
+    font-size: 25px;
+    padding: 10px;
+    text-align: start;
+}
+/* estilizando, centralizando, definindo tamanho do botão */
+#botao{
+    background-color: #525250;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    color: #e8ebe2;
+    height: 50px;
+    width: 140px;
+    border-radius: 24px;
+    font-size: 25px;
+    margin: auto;
+}
+/* após passar o mouse: mãozinha e diminuir a borda */
+#botao:hover{
+    background: #252524;
+    border: 0.5px solid #252524;
+    text-shadow: none;
+    cursor: pointer;
+    color: #eab089;
+}
+/* "muito obrigado!" */
+p{
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 40px;
+    color: #e8ebe2;
+}
+@media only screen and (max-width: 700px){
+    body{
+        background-image: none;
+        margin: 0;
+    }
+    #formulario{
+        width: auto;
+        height: auto;
+        padding: 8%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    #formulario fieldset{
+        gap: 60px;
+        
+    }#logo{padding-top: 6%;}
+    .conjunto-labels{
+        justify-content: center;
+        gap: 2%;
+    }
+    .labels{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        line-height: 45px;
+
+    }
+    .caixa-texto{
+        width: 80%;
+        height: 50px;
+        border: 1px solid #e8ebe2;
+        border-radius: 5px;
+    }.caixa-texto:focus, #sugestao:focus{
+        background-color: #1f1f1f;
+        transition: all 0.5s;
+        font-size: 115%;
+    }
+    #coracao, p{
+        display: none;
+    }
+    .itens > label{
+        font-size: 75%;
+    }
+    #sugestao{
+        width: 80%;
+        margin: auto;
+    }
+
+}
